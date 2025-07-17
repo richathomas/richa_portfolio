@@ -70,7 +70,7 @@
     .button-and-social {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 30px; /* increased gap for more spacing */
       margin-top: 25px;
       flex-wrap: wrap;
     }
@@ -92,6 +92,12 @@
       color: black;
     }
 
+    .social-icons {
+      display: flex;
+      gap: 30px; /* added explicit gap between icons */
+      align-items: center;
+    }
+
     .social-icons a {
       color: #00ffcc;
       font-size: 1.8rem;
@@ -106,30 +112,7 @@
       color: white;
     }
 
-    /* Contact icons below */
-    .contact-icons {
-      margin-top: 20px;
-      display: flex;
-      gap: 30px;
-      justify-content: flex-start;
-      /* align-left to match intro text */
-    }
-
-    .contact-icons a {
-      color: #00ffcc;
-      font-size: 1.8rem;
-      transition: transform 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-
-    .contact-icons a:hover {
-      transform: scale(1.2);
-      color: white;
-      text-decoration: none;
-    }
+    /* Removed .contact-icons styling since no icons */
 
     .profile-img-container {
       position: relative;
@@ -274,14 +257,8 @@
           </div>
         </div>
 
-        <div class="contact-icons">
-          <a href="mailto:richa@example.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="tel:+1234567890" aria-label="Phone">
-            <i class="fas fa-phone"></i>
-          </a>
-        </div>
+        <!-- Removed the contact-icons div entirely -->
+
       </div>
 
       <div class="profile-img-container">
