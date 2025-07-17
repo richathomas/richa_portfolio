@@ -96,20 +96,19 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      z-index: 2;
       position: relative;
+      z-index: 2;
+      display: block;
     }
 
-    .profile-img-container::before {
-      content: "";
+    .profile-img-container svg {
       position: absolute;
       top: -10px;
       left: -10px;
-      width: calc(100% + 20px);
-      height: calc(100% + 20px);
-      border-radius: 50%;
-      border: 4px dashed #00ffcc;
+      width: 320px;  /* 300 + 20 */
+      height: 320px; /* 300 + 20 */
       z-index: 1;
+      pointer-events: none;
     }
 
     nav {
@@ -230,6 +229,17 @@
       </div>
       <div class="profile-img-container">
         <img src="Richa_image.jpg.png" alt="Richa Liz Thomas" class="profile-img" />
+        <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <circle
+            cx="160"
+            cy="160"
+            r="154"
+            fill="none"
+            stroke="#00ffcc"
+            stroke-width="8"
+            stroke-dasharray="20 6"
+          />
+        </svg>
       </div>
     </div>
   </header>
@@ -242,6 +252,3 @@
   </section>
 </body>
 </html>
-
-
-
