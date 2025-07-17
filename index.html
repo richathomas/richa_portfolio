@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Richa Liz Thomas | DevOps Portfolio</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papmUlv6z7MHRpW5zCjcYcRKEap6Y4gRSHcVWRgOaO1xFzA5OdqPAwYFRAgfLId+81U/b8N9ZkoyqJm3g6ENtw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     body {
       margin: 0;
@@ -11,30 +18,39 @@
       background-color: #ffffff;
       color: #333;
     }
+
+    header, nav {
+      background-color: #40e0d0; /* light turquoise */
+    }
+
     header {
-      background-color: #3ccfcf;
       padding: 60px 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
     }
+
     .intro-text {
       max-width: 600px;
     }
+
     .intro-text h1 {
       font-size: 2.5rem;
       margin: 10px 0;
     }
+
     .intro-text p {
       font-size: 1rem;
       margin: 10px 0;
       color: #555;
     }
+
     .intro-text .highlight {
       font-weight: bold;
       color: #000;
     }
+
     .contact-btn {
       display: inline-block;
       margin-top: 20px;
@@ -45,6 +61,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .profile-img {
       width: 250px;
       height: 250px;
@@ -52,12 +69,13 @@
       object-fit: cover;
       border: 4px solid #222;
     }
+
     nav {
-      background-color: #3ccfcf;
       display: flex;
       justify-content: center;
       padding: 10px 0;
     }
+
     nav a {
       color: #222;
       margin: 0 15px;
@@ -65,6 +83,7 @@
       font-weight: 600;
       position: relative;
     }
+
     nav a::after {
       content: '';
       position: absolute;
@@ -76,28 +95,52 @@
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
-    nav a:hover::after, nav a.active::after {
+
+    nav a:hover::after,
+    nav a.active::after {
       transform: scaleX(1);
     }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
     }
+
     ul {
       list-style-type: square;
       padding-left: 20px;
     }
+
     footer {
       background-color: #111;
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #40e0d0;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .contact-info a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -114,7 +157,7 @@
 
   <header id="home">
     <div class="intro-text">
-      <p>Hello!!</p>
+      <p>Hello!</p>
       <h1>I'm Richa Liz Thomas</h1>
       <p>I Am Passionate <span class="highlight">DevOps Engineer</span></p>
       <p>Experienced in Kubernetes, Terraform, AWS, and Automation with over 4 years of expertise in large-scale infrastructure projects.</p>
@@ -162,9 +205,12 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: richa@example.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i><a href="mailto:richa@example.com">richa@example.com</a></p>
+      <p><i class="fab fa-github"></i><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+      <p><i class="fas fa-phone"></i><a href="tel:+1234567890">+1 234 567 890</a></p>
+    </div>
   </section>
 
   <footer>
