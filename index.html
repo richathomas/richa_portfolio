@@ -6,118 +6,158 @@
   <title>Richa Liz Thomas | DevOps Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
       color: #333;
     }
     header {
-      background-color: #343a40;
+      background-color: #3ccfcf;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .intro-text {
+      max-width: 600px;
+    }
+    .intro-text h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+    }
+    .intro-text p {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #555;
+    }
+    .intro-text .highlight {
+      font-weight: bold;
+      color: #000;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #111;
       color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    nav a {
-      margin: 0 15px;
+      padding: 10px 20px;
+      border-radius: 4px;
       text-decoration: none;
-      color: #343a40;
       font-weight: bold;
     }
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #222;
+    }
+    nav {
+      background-color: #3ccfcf;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #222;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #111;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    nav a:hover::after, nav a.active::after {
+      transform: scaleX(1);
+    }
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
-      border-bottom: 2px solid #343a40;
-      padding-bottom: 0.5rem;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
-    .project, .experience, .certification {
-      margin-bottom: 1.5rem;
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
     }
     footer {
+      background-color: #111;
+      color: white;
       text-align: center;
       padding: 1rem;
-      background-color: #343a40;
-      color: white;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #343a40;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Richa Liz Thomas</h1>
-    <p>Certified Kubernetes Administrator | AWS Solutions Architect | DevOps Engineer</p>
-  </header>
-
   <nav>
+    <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
+    <a href="#services">Services</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <header id="home">
+    <div class="intro-text">
+      <p>Hi There!</p>
+      <h1>I'm Richa Liz Thomas</h1>
+      <p>I Am Passionate <span class="highlight">DevOps Engineer</span></p>
+      <p>Experienced in Kubernetes, Terraform, AWS, and Automation with over 4 years of expertise in large-scale infrastructure projects.</p>
+      <a href="#contact" class="contact-btn">Contact Me</a>
+    </div>
+    <div>
+      <img src="your-profile-photo.jpg" alt="Richa Liz Thomas" class="profile-img" />
+    </div>
+  </header>
+
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a DevOps and Linux engineer with 4+ years of experience in cloud infrastructure, Kubernetes, CI/CD automation, and large-scale system administration. I'm passionate about building reliable platforms and solving real-world infrastructure problems.</p>
+    <p>I’m a Linux and DevOps engineer with deep experience in building and maintaining production-grade infrastructure using AWS, Kubernetes, and CI/CD tools. I enjoy solving complex problems and creating automation that improves performance and reliability.</p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="services">
+    <h2>Services</h2>
     <ul>
-      <li>Cloud: AWS, basic GCP</li>
-      <li>IaC: Terraform, Ansible</li>
-      <li>Containers: Docker, Kubernetes, Argo CD</li>
-      <li>CI/CD: GitLab CI, Jenkins</li>
-      <li>Monitoring: Prometheus, Grafana, Splunk</li>
-      <li>Languages: Bash, Python, SQL</li>
-      <li>Linux: RHEL, Ubuntu</li>
+      <li>Infrastructure Automation (Terraform, Ansible)</li>
+      <li>CI/CD Pipeline Development (GitHub, GitLab, Jenkins)</li>
+      <li>Container Orchestration (Docker, K8s, ArgoCD)</li>
+      <li>Monitoring & Observability (Splunk, Prometheus, Grafana)</li>
+      <li>Cloud Solutions Architecture (AWS)</li>
     </ul>
   </section>
 
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a class="contact-btn" href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download>Download Resume</a></p>
+  </section>
+
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Satellite Migration Project</h3>
-      <p>Migrated over 3,000 VMs from Red Hat Satellite 5 to 6, improving stability and reducing cost by 20%.</p>
-    </div>
-    <div class="project">
-      <h3>CI/CD Pipeline Automation</h3>
-      <p>Built end-to-end CI/CD pipelines using GitHub Actions and Terraform for EC2, IAM, and firewall provisioning.</p>
-    </div>
+    <h2>Portfolio Projects</h2>
+    <ul>
+      <li><strong>Satellite Migration</strong>: Migrated 3,000+ RHEL servers to Satellite 6 with zero downtime.</li>
+      <li><strong>CI/CD Infrastructure</strong>: Automated cloud provisioning and delivery pipelines using GitHub Actions & Terraform.</li>
+    </ul>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-      <h3>Tata Consultancy Services (TCS)</h3>
-      <p>Senior System Engineer — Led DevOps initiatives and infrastructure automation for global airline clients. Achieved 95% uptime across mission-critical services.</p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="certification">
-      <ul>
-        <li>AWS Certified Solutions Architect – Associate</li>
-        <li>Certified Kubernetes Administrator (CKA)</li>
-        <li>HashiCorp Terraform Associate</li>
-      </ul>
-    </div>
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>“Richa’s automation scripts cut our deployment time in half.” — TCS Project Lead</p>
+    <p>“One of the most reliable engineers I've worked with.” — DevOps Manager</p>
   </section>
 
   <section id="contact">
@@ -125,7 +165,6 @@
     <p>Email: richa@example.com</p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
-    <a class="button" href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download>Download Resume</a>
   </section>
 
   <footer>
