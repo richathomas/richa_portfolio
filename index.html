@@ -87,7 +87,7 @@
 
     .profile-img-container {
       position: relative;
-      width: 300px; /* Reduced from 400px */
+      width: 300px;
       height: 300px;
     }
 
@@ -103,22 +103,13 @@
     .profile-img-container::before {
       content: "";
       position: absolute;
-      top: -18px;
-      left: -18px;
-      width: calc(100% + 36px);
-      height: calc(100% + 36px);
+      top: -10px;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
       border-radius: 50%;
-      background: repeating-conic-gradient(
-        #00ffcc 0deg 5deg,
-        transparent 5deg 20deg
-      );
-      animation: spin 6s linear infinite;
+      border: 4px dashed #00ffcc;
       z-index: 1;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
 
     nav {
@@ -251,5 +242,6 @@
   </section>
 </body>
 </html>
+
 
 
