@@ -125,8 +125,6 @@
       background-color: #00ffcc;
     }
 
-    /* Removed .contact-icons styling since no icons */
-
     .profile-img-container {
       position: relative;
       width: 300px;
@@ -235,6 +233,13 @@
       font-size: 2rem;
       color: #00ffcc;
     }
+
+    /* Count animation styles */
+    .count {
+      transition: all 0.3s ease-out;
+      display: inline-block;
+      min-width: 20px; /* keeps layout stable during count */
+    }
   </style>
 </head>
 
@@ -272,8 +277,6 @@
           </div>
         </div>
 
-        <!-- Removed the contact-icons div entirely -->
-
       </div>
 
       <div class="profile-img-container">
@@ -294,9 +297,32 @@
   </header>
 
   <section class="metrics">
-    <div><strong>4+</strong>Years of Experience</div>
-    <div><strong>3</strong>Certifications</div>
-    <div><strong>5</strong>Projects Completed</div>
+    <div><strong><span class="count" data-target="4">0</span>+</strong> Years of Experience</div>
+    <div><strong><span class="count" data-target="3">0</span></strong> Certifications</div>
+    <div><strong><span class="count" data-target="5">0</span></strong> Projects Completed</div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".count");
+      const animationDuration = 2000; // animation duration in ms
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        let start = 0;
+        const stepTime = Math.abs(Math.floor(animationDuration / target));
+
+        const incrementCounter = () => {
+          start += 1;
+          counter.textContent = start;
+          if (start < target) {
+            setTimeout(incrementCounter, stepTime);
+          }
+        };
+
+        incrementCounter();
+      });
+    });
+  </script>
 </body>
 </html>
