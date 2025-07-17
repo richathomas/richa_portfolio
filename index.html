@@ -8,7 +8,6 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papmUlv6z7MHRpW5zCjcYcRKEap6Y4gRSHcVWRgOaO1xFzA5OdqPAwYFRAgfLId+81U/b8N9ZkoyqJm3g6ENtw=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
@@ -67,9 +66,16 @@
       color: #00ffcc;
     }
 
+    /* Container for Download CV + social icons */
+    .button-and-social {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
     .contact-btn {
-      display: inline-block;
-      margin-top: 20px;
       background-color: transparent;
       border: 2px solid #00ffcc;
       color: #00ffcc;
@@ -78,11 +84,51 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
+      white-space: nowrap;
     }
 
     .contact-btn:hover {
       background-color: #00ffcc;
       color: black;
+    }
+
+    .social-icons a {
+      color: #00ffcc;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: white;
+    }
+
+    /* Contact icons below */
+    .contact-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 30px;
+      justify-content: flex-start;
+      /* align-left to match intro text */
+    }
+
+    .contact-icons a {
+      color: #00ffcc;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: white;
+      text-decoration: none;
     }
 
     .profile-img-container {
@@ -105,8 +151,8 @@
       position: absolute;
       top: -10px;
       left: -10px;
-      width: 320px;  /* 300 + 20 */
-      height: 320px; /* 300 + 20 */
+      width: 320px;
+      height: 320px;
       z-index: 1;
       pointer-events: none;
       animation: spin 30s linear infinite;
@@ -176,20 +222,6 @@
       padding: 1rem;
     }
 
-    .contact-info i {
-      margin-right: 8px;
-      color: #00ffcc;
-    }
-
-    .contact-info a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
     .metrics {
       display: flex;
       justify-content: space-around;
@@ -226,14 +258,32 @@
         <h1>Richa Liz Thomas</h1>
         <p>I Am a Passionate <span class="highlight">Site Reliability Engineer / DevOps Engineer</span></p>
         <p>Experienced in Kubernetes, Terraform, Linux, CI/CD, AWS, and Automation with over 4 years in large-scale infrastructure projects.</p>
-        <a href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download class="contact-btn">Download CV</a>
-        <div style="margin-top: 20px;">
-          <a href="mailto:richa@example.com"><i class="fas fa-envelope fa-2x"></i></a>
-          <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-          <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="tel:+1234567890"><i class="fas fa-phone fa-2x"></i></a>
+
+        <div class="button-and-social">
+          <a href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download class="contact-btn">Download CV</a>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.credly.com/users/yourcredly" target="_blank" aria-label="Credly">
+              <i class="fas fa-certificate"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-icons">
+          <a href="mailto:richa@example.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+1234567890" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
         </div>
       </div>
+
       <div class="profile-img-container">
         <img src="Richa_image.jpg.png" alt="Richa Liz Thomas" class="profile-img" />
         <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -259,4 +309,3 @@
   </section>
 </body>
 </html>
-
