@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Richa Liz Thomas | DevOps Engineer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papmUlv6z7MHRpW5zCjcYcRKEap6Y4gRSHcVWRgOaO1xFzA5OdqPAwYFRAgfLId+81U/b8N9ZkoyqJm3g6ENtw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
   <style>
     body {
@@ -15,7 +21,7 @@
     }
 
     header {
-      background-image: url('your-background-image.jpg'); /* Replace with actual image */
+      background-image: url('img2.jpg.jpg'); /* Replace with actual background image path */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -56,29 +62,46 @@
     }
 
     .social-links a:hover {
-      color: #FFD700;
+      color: #00ffcc;
     }
 
     .resume-btn {
       margin-top: 20px;
-      background-color: #FFD700;
+      background-color: #00ffcc;
       color: black;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .resume-btn:hover {
-      background-color: #e6c200;
+      background-color: black;
+      color: #00ffcc;
+      border: 2px solid #00ffcc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="your-image.jpg" alt="Richa Liz Thomas" class="profile-img" />
+    <img src="Richa_image.jpg.png" alt="Richa Liz Thomas" class="profile-img" />
     <h1>Richa Liz Thomas</h1>
     <p>Certified AWS & Terraform DevOps Engineer | Kubernetes Enthusiast | Ex-TCS</p>
 
@@ -92,4 +115,5 @@
   </header>
 </body>
 </html>
+
 
