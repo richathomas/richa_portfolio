@@ -89,6 +89,62 @@
       position: relative;
       width: 400px;
       height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-img-container::before {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: conic-gradient(
+        green 0deg 8deg,
+        transparent 8deg 14deg,
+        green 14deg 26deg,
+        transparent 26deg 32deg,
+        green 32deg 40deg,
+        transparent 40deg 46deg,
+        green 46deg 58deg,
+        transparent 58deg 64deg,
+        green 64deg 72deg,
+        transparent 72deg 78deg,
+        green 78deg 90deg,
+        transparent 90deg 96deg,
+        green 96deg 108deg,
+        transparent 108deg 114deg,
+        green 114deg 126deg,
+        transparent 126deg 132deg,
+        green 132deg 144deg,
+        transparent 144deg 150deg,
+        green 150deg 162deg,
+        transparent 162deg 168deg,
+        green 168deg 180deg,
+        transparent 180deg 186deg,
+        green 186deg 198deg,
+        transparent 198deg 204deg,
+        green 204deg 216deg,
+        transparent 216deg 222deg,
+        green 222deg 234deg,
+        transparent 234deg 240deg,
+        green 240deg 252deg,
+        transparent 252deg 258deg,
+        green 258deg 270deg,
+        transparent 270deg 276deg,
+        green 276deg 288deg,
+        transparent 288deg 294deg,
+        green 294deg 306deg,
+        transparent 306deg 312deg,
+        green 312deg 324deg,
+        transparent 324deg 330deg,
+        green 330deg 342deg,
+        transparent 342deg 348deg,
+        green 348deg 360deg
+      );
+      animation: spin 10s linear infinite;
+      z-index: 1;
     }
 
     .profile-img {
@@ -97,19 +153,6 @@
       border-radius: 50%;
       object-fit: cover;
       z-index: 2;
-    }
-
-    .profile-img-container::before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      border: 2px dashed #fff;
-      border-radius: 50%;
-      animation: spin 8s linear infinite;
-      z-index: 1;
     }
 
     @keyframes spin {
