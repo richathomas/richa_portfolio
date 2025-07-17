@@ -3,78 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richa Liz Thomas - Portfolio</title>
+  <title>Richa Liz Thomas | DevOps Portfolio</title>
 
   <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papmUlv6z7MHRpW5zCjcYcRKEap6Y4gRSHcVWRgOaO1xFzA5OdqPAwYFRAgfLId+81U/b8N9ZkoyqJm3g6ENtw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 
-  <!-- Basic CSS -->
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
       color: #333;
     }
 
+    header, nav {
+      background-color: #40e0d0; /* light turquoise */
+    }
+
     header {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-top: 1rem;
+    .intro-text {
+      max-width: 600px;
     }
 
-    .contact-icons {
-      margin-top: 1rem;
-      font-size: 1.5rem;
+    .intro-text h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
     }
 
-    .contact-icons a {
-      margin: 0 10px;
-      color: blue;
-      text-decoration: none;
+    .intro-text p {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #555;
     }
 
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    .intro-text .highlight {
+      font-weight: bold;
+      color: #000;
     }
 
-    h2 {
-      color: #007bff;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      margin-top: 3rem;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Header -->
-  <header>
-    <img src="Richa image.jpg.jpg" alt="Richa Liz Thomas" class="profile-img" />
-    <h1>Richa Liz Thomas</h1>
-    <p>Cloud & DevOps | Linux | Kubernetes | AWS | Terraform</p>
-
-    <!-- Contact Icons -->
-    <div class="co
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      backgroun
