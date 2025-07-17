@@ -87,8 +87,8 @@
 
     .profile-img-container {
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 300px; /* Reduced from 400px */
+      height: 300px;
     }
 
     .profile-img {
@@ -103,15 +103,17 @@
     .profile-img-container::before {
       content: "";
       position: absolute;
-      top: -12px;
-      left: -12px;
-      width: calc(100% + 24px);
-      height: calc(100% + 24px);
+      top: -18px;
+      left: -18px;
+      width: calc(100% + 36px);
+      height: calc(100% + 36px);
       border-radius: 50%;
-      border: 4px dashed #00ffcc; /* ✅ Dashed green-cyan border */
+      background: repeating-conic-gradient(
+        #00ffcc 0deg 5deg,
+        transparent 5deg 20deg
+      );
       animation: spin 6s linear infinite;
       z-index: 1;
-      box-sizing: border-box;
     }
 
     @keyframes spin {
@@ -163,7 +165,6 @@
       color: white;
       background-color: black;
       padding: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     ul {
