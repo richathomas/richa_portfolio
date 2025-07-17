@@ -70,9 +70,8 @@
 
 .profile-img-container {
   display: flex;
-  justify-content: flex-end;   /* Aligns image toward the right */
-  padding-right: 100;           /* Push it slightly away from the edge */
-  margin-top: 30px;            /* Optional: adds space from the top */
+  justify-content: center; /* Center horizontally */
+  margin-top: 30px;
 }
 
 .profile-img {
@@ -81,6 +80,7 @@
   border-radius: 20%;
   object-fit: cover;
   border: 4px solid #222;
+  transform: translateX(40px); /* Shift image 40px right */
 }
 
     nav {
@@ -172,7 +172,7 @@
   <header id="home">
     <div class="intro-text">
       <h1>Richa Liz Thomas</h1>
-      <p>I Am Passionate <span class="highlight">/Site Reliability Engineer/DevOps Engineer</span></p>
+      <p>I Am Passionate <span class="highlight">Site Reliability Engineer/DevOps Engineer</span></p>
       <p>Experienced in Kubernetes, Terraform, Linux, CI/CD pipeline, AWS, and Automation with over 4 years of expertise in large-scale infrastructure projects.</p>
       <a href="#contact" class="contact-btn">Contact Me</a>
     </div>
