@@ -57,4 +57,168 @@
     .contact-btn {
       display: inline-block;
       margin-top: 20px;
-      backgroun
+      background-color: #111;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #222;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #222;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #111;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: blue;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .contact-info a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <div class="intro-text">
+      <p>Hello!</p>
+      <h1>I'm Richa Liz Thomas</h1>
+      <p>I Am Passionate <span class="highlight">DevOps Engineer</span></p>
+      <p>Experienced in Kubernetes, Terraform, AWS, and Automation with over 4 years of expertise in large-scale infrastructure projects.</p>
+      <a href="#contact" class="contact-btn">Contact Me</a>
+    </div>
+    <div>
+      <img src="Richa image.jpg.jpg" alt="Richa Liz Thomas" class="profile-img" />
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a Linux and DevOps engineer with deep experience in building and maintaining production-grade infrastructure using AWS, Kubernetes, and CI/CD tools. I enjoy solving complex problems and creating automation that improves performance and reliability.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Infrastructure Automation (Terraform, Ansible)</li>
+      <li>CI/CD Pipeline Development (GitHub, GitLab, Jenkins)</li>
+      <li>Container Orchestration (Docker, K8s, ArgoCD)</li>
+      <li>Monitoring & Observability (Splunk, Prometheus, Grafana)</li>
+      <li>Cloud Solutions Architecture (AWS)</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a class="contact-btn" href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download>Download Resume</a></p>
+  </section>
+
+  <section id="projects">
+    <h2>Portfolio Projects</h2>
+    <ul>
+      <li><strong>Satellite Migration</strong>: Migrated 3,000+ RHEL servers to Satellite 6 with zero downtime.</li>
+      <li><strong>CI/CD Infrastructure</strong>: Automated cloud provisioning and delivery pipelines using GitHub Actions & Terraform.</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>“Richa’s automation scripts cut our deployment time in half.” — TCS Project Lead</p>
+    <p>“One of the most reliable engineers I've worked with.” — DevOps Manager</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i><a href="mailto:richa@example.com">richa@example.com</a></p>
+      <p><i class="fab fa-github"></i><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+      <p><i class="fas fa-phone"></i><a href="tel:+1234567890">+1 234 567 890</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Richa Liz Thomas. All rights reserved.</p>
+  </footer>
+</body>
+</html>
