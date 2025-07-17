@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Richa Liz Thomas | DevOps Portfolio</title>
 
-  <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,20 +22,19 @@
     }
 
     header, nav {
-  background-image: url('img2.jpg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+      background-image: url('img2.jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-  header {
-  padding: 60px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 60px 20px;
+    }
 
     .intro-text {
       max-width: 600px;
@@ -45,42 +43,70 @@
     .intro-text h1 {
       font-size: 2.5rem;
       margin: 10px 0;
-      color: #b0b0b0;
+      color: #fff;
     }
 
     .intro-text p {
       font-size: 1rem;
       margin: 10px 0;
-      color: #b0b0b0;
+      color: #ccc;
     }
 
     .intro-text .highlight {
       font-weight: bold;
-      color: #b0b0b0;
+      color: #00ffcc;
     }
 
     .contact-btn {
       display: inline-block;
       margin-top: 20px;
-      background-color: #b0b0b0;
-      color: black;
+      background-color: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
       padding: 10px 20px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
-.profile-img-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  margin-top: 30px;
-}
+    .contact-btn:hover {
+      background-color: #00ffcc;
+      color: black;
+    }
 
-.profile-img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-}
+    .profile-img-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin-top: 30px;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    .profile-img-container::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px dashed #fff;
+      border-radius: 50%;
+      animation: spin 8s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
     nav {
       display: flex;
@@ -103,7 +129,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #FFD700;
+      background-color: #00ffcc;
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
@@ -119,15 +145,15 @@
       margin: auto;
     }
 
-  h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;            /* White text */
-  background-color: black; /* Black background */
-  padding: 10px;           /* Optional: adds spacing inside the h2 */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: white;
+      background-color: black;
+      padding: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
     ul {
       list-style-type: square;
@@ -143,20 +169,33 @@
 
     .contact-info i {
       margin-right: 8px;
-      color: blue;
-    }
-
-    .contact-info p {
-      margin: 8px 0;
+      color: #00ffcc;
     }
 
     .contact-info a {
-      color: #333;
+      color: #00ffcc;
       text-decoration: none;
     }
 
     .contact-info a:hover {
       text-decoration: underline;
+    }
+
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .metrics div {
+      font-size: 1.2rem;
+    }
+
+    .metrics strong {
+      display: block;
+      font-size: 2rem;
+      color: #00ffcc;
     }
   </style>
 </head>
@@ -175,62 +214,26 @@
   <header id="home">
     <div class="intro-text">
       <h1>Richa Liz Thomas</h1>
-      <p>I Am Passionate <span class="highlight">Site Reliability Engineer/DevOps Engineer</span></p>
-      <p>Experienced in Kubernetes, Terraform, Linux, CI/CD pipeline, AWS, and Automation with over 4 years of expertise in large-scale infrastructure projects.</p>
-      <a href="#contact" class="contact-btn">Contact Me</a>
+      <p>I Am a Passionate <span class="highlight">Site Reliability Engineer / DevOps Engineer</span></p>
+      <p>Experienced in Kubernetes, Terraform, Linux, CI/CD, AWS, and Automation with over 4 years in large-scale infrastructure projects.</p>
+      <a href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download class="contact-btn">Download CV</a>
+      <div style="margin-top: 20px;">
+        <a href="mailto:richa@example.com"><i class="fas fa-envelope fa-2x"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="tel:+1234567890"><i class="fas fa-phone fa-2x"></i></a>
+      </div>
     </div>
-    <div>
+    <div class="profile-img-container">
       <img src="Richa_image.jpg.png" alt="Richa Liz Thomas" class="profile-img" />
     </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a Linux and DevOps engineer with deep experience in building and maintaining production-grade infrastructure using AWS, Kubernetes, and CI/CD tools. I enjoy solving complex problems and creating automation that improves performance and reliability.</p>
+  <section class="metrics">
+    <div><strong>4+</strong>Years of Experience</div>
+    <div><strong>3x</strong>Certified</div>
+    <div><strong>12</strong>Projects Completed</div>
+    <div><strong>99.99%</strong>Uptime Maintained</div>
   </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Infrastructure Automation (Terraform, Ansible)</li>
-      <li>CI/CD Pipeline Development (GitHub, GitLab, Jenkins)</li>
-      <li>Container Orchestration (Docker, K8s, ArgoCD)</li>
-      <li>Monitoring & Observability (Splunk, Prometheus, Grafana)</li>
-      <li>Cloud Solutions Architecture (AWS)</li>
-    </ul>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a class="contact-btn" href="Richa_Liz_Thomas_Resume_Devops_Engineer.pdf" download>Download Resume</a></p>
-  </section>
-
-  <section id="projects">
-    <h2>Portfolio Projects</h2>
-    <ul>
-      <li><strong>Satellite Migration</strong>: Migrated 3,000+ RHEL servers to Satellite 6 with zero downtime.</li>
-      <li><strong>CI/CD Infrastructure</strong>: Automated cloud provisioning and delivery pipelines using GitHub Actions & Terraform.</li>
-    </ul>
-  </section>
-
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <p>“Richa’s automation scripts cut our deployment time in half.” — TCS Project Lead</p>
-    <p>“One of the most reliable engineers I've worked with.” — DevOps Manager</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i><a href="mailto:richa@example.com">richa@example.com</a></p>
-      <p><i class="fab fa-github"></i><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-      <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
-      <p><i class="fas fa-phone"></i><a href="tel:+1234567890">+1 234 567 890</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Richa Liz Thomas. All rights reserved.</p>
-  </footer>
 </body>
 </html>
