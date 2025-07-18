@@ -6,107 +6,149 @@
   <title>Education | Richa Liz Thomas</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Cambria', serif;
-      background-color: #ffffff;
-      color: #0B2D45;
+      background-color: white;
+      color: white;
+      padding: 40px;
+      margin: 0;
     }
 
-    .header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px;
-    }
-
-    .home-link {
+    .home-icon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #368DBB;
       text-decoration: none;
-      color: #0B2D45;
-      font-size: 1.5rem;
-      font-weight: bold;
     }
 
     h1 {
       text-align: center;
+      color: #368DBB;
       font-size: 2.5rem;
-      color: #0B2D45;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .education-container {
-      max-width: 1000px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 30px;
-      padding: 0 20px 40px;
+      position: relative;
     }
 
     .edu-box {
-      background-color: #f0f7fa;
-      border-left: 6px solid #368DBB;
+      background-color: #112f4d;
       padding: 20px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     .edu-box h2 {
-      font-size: 1.4rem;
-      margin: 5px 0;
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      font-weight: bold;
     }
 
-    .edu-box .year {
+    .edu-box p {
+      margin: 6px 0;
+      font-size: 1.1rem;
+    }
+
+    .edu-box .highlight {
       color: #368DBB;
       font-weight: bold;
     }
 
-    .edu-box ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .edu-box li::before {
-      content: "•";
-      color: #368DBB;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-
-    .certificate-link {
+    .view-certificate {
       display: inline-block;
       margin-top: 10px;
-      color: #368DBB;
-      font-weight: bold;
-      text-decoration: underline;
+      background-color: #368DBB;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
     }
 
-    .footer-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #ffffff;
-      font-size: 1.8rem;
+    .view-certificate:hover {
+      background-color: #2a6e96;
     }
 
-    .footer-nav a {
-      color: #368DBB;
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .download-link {
+      display: block;
+      text-align: right;
+      padding: 10px 20px;
+      background: #f2f2f2;
+    }
+
+    .download-link a {
+      color: #0B2D45;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .footer-nav a:hover {
-      text-decoration: underline;
+    nav.footer-nav {
+      width: 80%;
+      max-width: 700px;
+      margin: 30px auto 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #368DBB;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .arrow:hover {
+      color: #0B2D45;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <a href="index.html" class="home-link">🏠</a>
-  </div>
+  <!-- Home Icon -->
+  <a href="index.html" class="home-icon" title="Home">🏠</a>
 
   <h1>My Education</h1>
 
@@ -114,30 +156,58 @@
 
     <div class="edu-box">
       <h2>APJ Abdul Kalam Technological University, Kerala, India</h2>
-      <ul>
-        <li>Master of Engineering - Computer Science and Engineering</li>
-        <li class="year">Year: 2018 – 2020</li>
-        <li>CGPA: 8.9 / 10</li>
-        <li><a class="certificate-link" href="apj-masters-degree.pdf" download target="_blank">Click to view certificate</a></li>
-      </ul>
+      <p>Master of Engineering - Computer Science and Engineering</p>
+      <p><span class="highlight">Year:</span> 2018 - 2020</p>
+      <p><span class="highlight">CGPA:</span> 8.9 / 10</p>
+      <button class="view-certificate" onclick="openModal('modal1')">Click to view certificate</button>
     </div>
 
     <div class="edu-box">
       <h2>Mahatma Gandhi University, Kerala, India</h2>
-      <ul>
-        <li>Bachelor of Engineering - Computer Science and Engineering</li>
-        <li class="year">Year: 2014 – 2018</li>
-        <li>CGPA: 8.27 / 10</li>
-        <li><a class="certificate-link" href="mg-bachelors-degree.pdf" download target="_blank">Click to view certificate</a></li>
-      </ul>
+      <p>Bachelor of Engineering - Computer Science and Engineering</p>
+      <p><span class="highlight">Year:</span> 2014 - 2018</p>
+      <p><span class="highlight">CGPA:</span> 8.27 / 10</p>
+      <button class="view-certificate" onclick="openModal('modal2')">Click to view certificate</button>
     </div>
 
   </div>
 
+  <!-- Navigation Arrows at Corners -->
   <nav class="footer-nav" aria-label="Page navigation">
-    <a href="experience.html">&lt;&lt;</a>
-    <a href="skills.html">&gt;&gt;</a>
+    <a href="experience.html" class="arrow">&lt;&lt;</a>
+    <a href="projects.html" class="arrow">&gt;&gt;</a>
   </nav>
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+      <iframe src="Masters_Certificate.pdf"></iframe>
+      <div class="download-link">
+        <a href="Masters_Certificate.pdf" download>Download Certificate</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+      <iframe src="Bachelors_Certificate.pdf"></iframe>
+      <div class="download-link">
+        <a href="Bachelors_Certificate.pdf" download>Download Certificate</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
