@@ -3,161 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skills Page</title>
+  <title>Skills</title>
   <style>
     body {
       font-family: Cambria, serif;
-      background-color: #f9f9f9;
-      padding: 40px;
+      background-color: #f4f9fc;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
 
-    .heading {
-      font-size: 28px;
-      font-weight: normal;
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 32px;
       color: #000;
-    }
-
-    .experience-title {
-      font-size: 56px;
       font-weight: bold;
-      color: #368DBB;
-      margin-top: 0;
     }
 
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+    .experience-tag {
+      font-size: 64px;
+      color: #368DBB;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .skill-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 40px;
     }
 
-    .skill-card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    .skill-box {
+      width: 180px;
+      margin: 15px;
       padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .skill-name {
       font-size: 18px;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .skill-level {
+      margin-top: 10px;
+      font-size: 14px;
       font-weight: bold;
-      padding: 4px 8px;
-      border-radius: 6px;
-      display: inline-block;
     }
 
     .experienced {
-      background-color: #0B2D45;
-      color: #fff;
+      color: #003366; /* Dark Blue */
     }
 
     .intermediate {
-      background-color: #23678A;
-      color: #fff;
+      color: #336699; /* Medium Blue */
     }
 
     .basic {
-      background-color: #84BDE5;
-      color: #000;
+      color: #66A3D2; /* Light Blue */
+    }
+
+    .footer {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .arrow-link {
+      font-size: 24px;
+      text-decoration: none;
+      color: #368DBB;
+      font-weight: bold;
+    }
+
+    .arrow-link:hover {
+      color: #0B2D45;
     }
   </style>
 </head>
 <body>
-  <div class="heading">Explore My</div>
-  <div class="experience-title">Experience</div>
+  <div class="container">
+    <h1>Explore My</h1>
+    <p class="experience-tag">Experience</p>
 
-  <div class="skills-container">
-    <!-- Experienced -->
-    <div class="skill-card">
-      <div class="skill-name">Linux</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Kubernetes</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Terraform</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">GitLab CI/CD</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">YAML</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">AWS</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Bash</div>
-      <div class="skill-level experienced">Experienced</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">EFK Stack</div>
-      <div class="skill-level experienced">Experienced</div>
+    <div class="skill-section">
+      <!-- Experienced Skills -->
+      <div class="skill-box">
+        <div class="skill-name">Linux</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Kubernetes</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Terraform</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">GitLab CI/CD</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">YAML</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">AWS</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Bash</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">EFK Stack</div>
+        <div class="skill-level experienced">Experienced</div>
+      </div>
+
+      <!-- Intermediate Skills -->
+      <div class="skill-box">
+        <div class="skill-name">Prometheus</div>
+        <div class="skill-level intermediate">Intermediate</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Grafana</div>
+        <div class="skill-level intermediate">Intermediate</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Ansible</div>
+        <div class="skill-level intermediate">Intermediate</div>
+      </div>
+
+      <!-- Basic Skills -->
+      <div class="skill-box">
+        <div class="skill-name">ArgoCD</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Python</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">PostgreSQL</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">GitHub</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Git</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Docker</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">Helm</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">HTML</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-name">CSS</div>
+        <div class="skill-level basic">Basic</div>
+      </div>
     </div>
 
-    <!-- Intermediate -->
-    <div class="skill-card">
-      <div class="skill-name">Prometheus</div>
-      <div class="skill-level intermediate">Intermediate</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Grafana</div>
-      <div class="skill-level intermediate">Intermediate</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Ansible</div>
-      <div class="skill-level intermediate">Intermediate</div>
-    </div>
-
-    <!-- Basic -->
-    <div class="skill-card">
-      <div class="skill-name">ArgoCD</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Python</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">PostgreSQL</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">GitHub</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">HTML</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">CSS</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Git</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Docker</div>
-      <div class="skill-level basic">Basic</div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-name">Helm</div>
-      <div class="skill-level basic">Basic</div>
+    <div class="footer">
+      <a class="arrow-link" href="about.html">&#8592; About</a>
+      <a class="arrow-link" href="experience.html">Experience &#8594;</a>
     </div>
   </div>
 </body>
