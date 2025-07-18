@@ -11,9 +11,6 @@
       font-family: 'Cambria', serif;
       background-color: #0B2D45;
       color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     h1 {
@@ -33,40 +30,42 @@
       font-size: 1.3rem;
       line-height: 1.8;
       text-align: justify;
-      flex-grow: 1;
     }
 
-    .footer {
-      margin-top: 60px;
+    .footer-nav {
       display: flex;
       justify-content: space-between;
-      padding: 20px;
+      max-width: 900px;
+      margin: 50px auto 0;
+      font-size: 1.2rem;
     }
 
-    .arrow-link {
-      font-size: 24px;
-      text-decoration: none;
+    .footer-nav a {
       color: #368DBB;
-      font-weight: bold;
+      text-decoration: none;
     }
 
-    .arrow-link:hover {
-      color: #0B2D45;
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .arrow {
+      position: relative;
+      top: -3px; /* Adjust arrow upwards */
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <h1>Get to Know More <strong>About Me</strong></h1>
+
   <div class="about-content">
     Site Reliability Engineer with over 4 years of experience in Linux infrastructure management and provisioning, supporting high-availability systems for international clients. Skilled in DevOps practices including load balancing, CI/CD pipeline creation and optimization using Jenkins and GitLab CI/CD, infrastructure orchestration and troubleshooting on Kubernetes, and automation using Ansible, Terraform, and Shell scripting. Proficient in monitoring and observability using ELK Stack, ArgoCD, Prometheus, and Grafana. Experienced in managing mission-critical aviation systems. I thrive in complex environments, enjoy solving performance bottlenecks, and am driven by a passion for automation and continuous improvement.
   </div>
-  <div class="footer">
-    <a href="index.html" aria-label="Back to Home">
-      &#8592;
-    </a>
-    <a href="skills.html" aria-label="Go to Skills">
-      &#8594;
-    </a>
-  </div>
+
+  <nav class="footer-nav" aria-label="Page navigation">
+    <a href="index.html"><span class="arrow">&#8592;</span></a>
+    <a href="skills.html"><span class="arrow">&#8594;</span></a>
+  </nav>
 </body>
 </html>
