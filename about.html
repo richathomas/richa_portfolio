@@ -11,6 +11,9 @@
       font-family: 'Cambria', serif;
       background-color: #0B2D45;
       color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     h1 {
@@ -30,16 +33,28 @@
       font-size: 1.3rem;
       line-height: 1.8;
       text-align: justify;
+      flex-grow: 1;
     }
 
-    a.back-link {
-      display: inline-block;
-      margin-top: 30px;
+    .footer-nav {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto 0 auto;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .footer-nav a {
       color: #368DBB;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    a.back-link:hover {
+    .footer-nav a:hover {
       text-decoration: underline;
     }
   </style>
@@ -51,8 +66,13 @@
     Site Reliability Engineer with over 4 years of experience in Linux infrastructure management and provisioning, supporting high-availability systems for international clients. Skilled in DevOps practices including load balancing, CI/CD pipeline creation and optimization using Jenkins and GitLab CI/CD, infrastructure orchestration and troubleshooting on Kubernetes, and automation using Ansible, Terraform, and Shell scripting. Proficient in monitoring and observability using ELK Stack, ArgoCD, Prometheus, and Grafana. Experienced in managing mission-critical aviation systems. I thrive in complex environments, enjoy solving performance bottlenecks, and am driven by a passion for automation and continuous improvement.
   </div>
 
-  <div style="text-align: center;">
-    <a href="index.html" class="back-link">← Back to Home</a>
-  </div>
+  <nav class="footer-nav" aria-label="Page navigation">
+    <a href="index.html" aria-label="Back to Home">
+      &#8592; Home
+    </a>
+    <a href="skills.html" aria-label="Go to Skills">
+      Skills &#8594;
+    </a>
+  </nav>
 </body>
 </html>
