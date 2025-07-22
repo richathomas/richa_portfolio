@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My ProjectWorks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #58a6ff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .box {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My ProjectWorks</h1>
+
+  <div class="grid">
+    <div class="box">Run project locally</div>
+    <div class="box">Made Multi-stage docker image</div>
+    <div class="box">Made K8's ingress, svc, deploy files</div>
+    <div class="box">Made AWS IAM user (optional but recommended)</div>
+    <div class="box">Installed and configured AWS CLI</div>
+    <div class="box">Installed Kubectl & AWS-EKS</div>
+    <div class="box">Installed NGINX</div>
+    <div class="box">Applied all K8s files</div>
+    <div class="box">DNS mapped the loadbalancer</div>
+    <div class="box">Installed Helm Charts</div>
+    <div class="box">Moved K8s file to template folder of helm</div>
+    <div class="box">Deleted all the svc, ingress & deploy applied</div>
+    <div class="box">Installed the project on helm-charts (testing)</div>
+    <div class="box">Uninstalled helm project</div>
+    <div class="box">Continuous Integration</div>
+    <div class="box">Continuous Delivery</div>
+    </div>
+    <div class="grid">
+    <div class="box">Continuous Integration</div>
+    <div class="box">Made GitHub workflow</div>
+    </div>
+    <div class="grid">
+    <div class="box">Continuous Delivery</div>
+    <div class="box">Installed ArgoCD</div>
+    <div class="box">Obtained password from secret file</div>
+    <div class="box">Made a new app by connecting GitHub repo</div>
+  </div>
+
+</body>
+</html>
