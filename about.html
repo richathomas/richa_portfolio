@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Richa Liz Thomas</title>
+  <title>Profile | Richa Liz Thomas</title>
   <style>
     body {
       margin: 0;
@@ -29,43 +29,86 @@
       margin: 40px auto;
       font-size: 1.3rem;
       line-height: 1.8;
-      text-align: justify;
     }
 
-    .footer-nav {
+    .about-section {
+      margin-bottom: 40px;
+    }
+
+    .about-section p {
+      margin: 8px 0;
+    }
+
+    h2 {
+      color: #368DBB;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 60px;
       display: flex;
       justify-content: space-between;
-      max-width: 900px;
-      margin: 50px auto 0;
-      font-size: 1.7rem;
+      padding: 20px 40px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .footer-nav a {
+    .arrow-link {
+      font-size: 28px;
+      text-decoration: none;
+      color: #368DBB;
+      font-weight: bold;
+    }
+
+    .arrow-link:hover {
+      color: #ffffff;
+    }
+
+    .home-icon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
       color: #368DBB;
       text-decoration: none;
     }
 
-    .footer-nav a:hover {
-      text-decoration: underline;
-    }
-
-    .arrow {
-      position: relative;
-      top: -1px; /* Adjust arrow upwards */
-      display: inline-block;
+    .home-icon:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <h1>Get to Know More <strong>About Me</strong></h1>
+  <a href="index.html" class="home-icon" title="Home">&#8962;</a>
+
+  <h1><strong>Profile</strong></h1>
 
   <div class="about-content">
-    Site Reliability Engineer with over 4 years of experience in Linux infrastructure management and provisioning, supporting high-availability systems for international clients. Skilled in DevOps practices including load balancing, CI/CD pipeline creation and optimization using Jenkins and GitLab CI/CD, infrastructure orchestration and troubleshooting on Kubernetes, and automation using Ansible, Terraform, and Shell scripting. Proficient in monitoring and observability using ELK Stack, ArgoCD, Prometheus, and Grafana. Experienced in managing mission-critical aviation systems. I thrive in complex environments, enjoy solving performance bottlenecks, and am driven by a passion for automation and continuous improvement.
+    <div class="about-section">
+      <p><strong>Name:</strong> Richa Liz Thomas</p>
+      <p><strong>Designation:</strong> Senior System Engineer / Site Reliability Engineer</p>
+      <p><strong>Company:</strong> Tata Consultancy Services - TCS</p>
+      <p><strong>Experience:</strong> 4+ years</p>
+      <p><strong>Nationality:</strong> India</p>
+      <p><strong>Address:</strong> 143 Whitwell Dr, Brampton, ON, Canada - L6P 1L2</p>
+      <p><strong>Status:</strong> Canadian Permanent Resident</p>
+      <p><strong>Languages:</strong> English, Malayalam</p>
+      <p><strong>Availability:</strong> Immediately</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="about-section">
+      <p><strong>Mobile:</strong> +1 647 523 3620</p>
+      <p><strong>Email:</strong> richathomas95@gmail.com</p>
+    </div>
   </div>
 
-  <nav class="footer-nav" aria-label="Page navigation">
-    <a href="index.html"><span class="arrow">&#8592;</span></a>
-    <a href="skills.html"><span class="arrow">&#8594;</span></a>
-  </nav>
+  <div class="footer">
+    <a class="arrow-link" href="projects.html">&#8592; Projects</a>
+    <span></span>
+  </div>
 </body>
 </html>
