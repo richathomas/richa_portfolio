@@ -19,9 +19,15 @@
       font-size: 2rem;
     }
 
+    h2 {
+      color: #58a6ff;
+      margin-top: 50px;
+      font-size: 1.5rem;
+    }
+
     .project-box {
       width: 50%;
-      margin: 0 auto;
+      margin: 20px auto;
       background-color: #161b22;
       border: 1px solid #30363d;
       border-radius: 12px;
@@ -29,24 +35,52 @@
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     }
 
-    .project-description {
-      font-size: 1rem;
-      color: #c9d1d9;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
     .project-image {
-      width: 100%;
+      width: 70%;
       height: auto;
       border-radius: 8px;
       cursor: pointer;
-      margin: 0 auto; 
+      margin: 0 auto;
+      display: block;
     }
 
     .project-box:hover {
       transform: scale(1.02);
       transition: transform 0.3s ease;
+    }
+
+    .footer {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .arrow-link {
+      font-size: 28px;
+      text-decoration: none;
+      color: #368DBB;
+      font-weight: bold;
+    }
+
+    .arrow-link:hover {
+      color: #0B2D45;
+    }
+
+    .home-icon {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #368DBB;
+      text-decoration: none;
+    }
+
+    .home-icon svg:hover {
+      fill: #0B2D45;
     }
   </style>
 </head>
@@ -54,12 +88,42 @@
 
   <h1>My Project Works</h1>
 
+  <!-- Project 1 -->
   <div class="project-box">
     <a href="https://github.com/richathomas/infra-app-devops" target="_blank">
-      <img src="PIC1.jpg" alt="Project Diagram" class="project-image" style="width: 70%; height: auto;" />
+      <img src="PIC1.jpg" alt="Project Diagram 1" class="project-image" />
     </a>
   </div>
 
+  <!-- Project 2 -->
+  <div class="project-box">
+    <a href="https://github.com/richathomas/devops-ci-cd-pipeline" target="_blank">
+      <img src="PIC3.jpg" alt="Project Diagram 2" class="project-image" />
+    </a>
+  </div>
+
+  <!-- Master's Project Section -->
+  <h2>Master's Project</h2>
+
+  <!-- Project 3 -->
+  <div class="project-box">
+    <a href="https://github.com/richathomas/online-writer-identification" target="_blank">
+      <img src="pic2.jpg" alt="Master Project Diagram" class="project-image" />
+    </a>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer">
+    <a class="arrow-link" href="education.html">&lt;&lt;</a> 
+    <a class="arrow-link" href="about.html">&gt;&gt;</a> 
+  </div>
+
+  <!-- Home Icon -->
+  <a href="index.html" class="home-icon" title="Home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#368DBB" viewBox="0 0 24 24">
+      <path d="M12 3l9 8h-3v9h-12v-9h-3l9-8z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
-
