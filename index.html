@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="K6r7tq-SlvJkGkxnmDPkuQrH097qIMMI2hDmGi5To-4" />
+  
   <title>Richa Liz Thomas | DevOps Portfolio</title>
 
   <link
@@ -61,7 +65,7 @@
       color: black;
     }
 
-     .intro-text p2 {
+    .intro-text p2 {
       font-size: 2.5rem;
       margin: 10px 0;
       color: black;
@@ -78,11 +82,10 @@
       color: #368DBB;
     }
 
-    /* Container for Download CV + social icons */
     .button-and-social {
       display: flex;
       align-items: center;
-      gap: 30px; /* increased gap for more spacing */
+      gap: 30px;
       margin-top: 25px;
       flex-wrap: wrap;
     }
@@ -106,7 +109,7 @@
 
     .social-icons {
       display: flex;
-      gap: 30px; /* added explicit gap between icons */
+      gap: 30px;
       align-items: center;
     }
 
@@ -117,11 +120,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
-      width: 25px;           /* Set width */
-      height: 25px;          /* Set height */
-      border-radius: 30%;    /* Makes it round */
-      background-color: transparent; /* Optional: clear bg */
+      width: 25px;
+      height: 25px;
+      border-radius: 30%;
+      background-color: transparent;
       border: 2px solid #368DBB;
     }
 
@@ -241,11 +243,10 @@
       color: #368DBB;
     }
 
-    /* Count animation styles */
     .count {
       transition: all 0.3s ease-out;
       display: inline-block;
-      min-width: 20px; /* keeps layout stable during count */
+      min-width: 20px;
     }
   </style>
 </head>
@@ -283,7 +284,6 @@
             </a>
           </div>
         </div>
-
       </div>
 
       <div class="profile-img-container">
@@ -302,6 +302,7 @@
       </div>
     </div>
   </header>
+
   <br />
   <section class="metrics">
     <div><strong><span class="count" data-target="4">0</span>+</strong> Years of Experience</div>
@@ -313,7 +314,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll(".count");
-      const animationDuration = 2000; // animation duration in ms
+      const animationDuration = 2000;
 
       counters.forEach(counter => {
         const target = +counter.getAttribute("data-target");
