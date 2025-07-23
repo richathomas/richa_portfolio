@@ -32,8 +32,15 @@
 
     .about-section p {
       margin: 8px 0;
-      color: grey;
       font-weight: normal;
+    }
+
+    .label {
+      color: grey;
+    }
+
+    .value {
+      color: white;
     }
 
     h2 {
@@ -59,7 +66,7 @@
     }
 
     .arrow:hover {
-      color: #0B2D45;
+      color: white;
     }
 
     .home-icon {
@@ -89,31 +96,32 @@
     </svg>
   </a>
 
-  <h1>ABOUT ME</h1>
+  <h1>ABOUT</h1>
 
   <div class="about-content">
     <div class="about-section">
-      <p>Name: Richa Liz Thomas</p>
-      <p>Designation: Senior System Engineer / Site Reliability Engineer</p>
-      <p>Company: Tata Consultancy Services - TCS</p>
-      <p>Experience: 4+ years</p>
-      <p>Nationality: India</p>
-      <p>Address: 143 Whitwell Dr, Brampton, ON, Canada - L6P 1L2</p>
-      <p>Status: Canadian Permanent Resident</p>
-      <p>Languages: English, Malayalam</p>
-      <p>Availability: Immediately</p>
+      <p><span class="label">Name:</span> <span class="value">Richa Liz Thomas</span></p>
+      <p><span class="label">Designation:</span> <span class="value">Senior System Engineer / Site Reliability Engineer</span></p>
+      <p><span class="label">Company:</span> <span class="value">Tata Consultancy Services - TCS</span></p>
+      <p><span class="label">Experience:</span> <span class="value">4+ years</span></p>
+      <p><span class="label">Nationality:</span> <span class="value">India</span></p>
+      <p><span class="label">Address:</span> <span class="value">143 Whitwell Dr, Brampton, ON, Canada - L6P 1L2</span></p>
+      <p><span class="label">Status:</span> <span class="value">Canadian Permanent Resident</span></p>
+      <p><span class="label">Languages:</span> <span class="value">English, Malayalam</span></p>
+      <p><span class="label">Availability:</span> <span class="value">Immediately</span></p>
     </div>
 
     <h2>Contact</h2>
     <div class="about-section">
-      <p>Mobile: +1 647 523 3620</p>
-      <p>Email: richathomas95@gmail.com</p>
+      <p><span class="label">Mobile:</span> <span class="value">+1 647 523 3620</span></p>
+      <p><span class="label">Email:</span> <span class="value">richathomas95@gmail.com</span></p>
     </div>
   </div>
 
-  <nav class="footer-nav">
-    <a class="arrow" href="projects.html">&#8592;</a>
-    <span></span>
+  <!-- Footer Navigation Arrows -->
+  <nav class="footer-nav" aria-label="Page navigation">
+    <a href="experience.html" class="arrow">&lt;&lt;</a>
+    <a href="projects.html" class="arrow">&gt;&gt;</a>
   </nav>
 
 </body>
