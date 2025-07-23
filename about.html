@@ -19,11 +19,6 @@
       font-size: 2.5rem;
     }
 
-    h1 strong {
-      font-weight: bold;
-      color: white;
-    }
-
     .about-content {
       max-width: 900px;
       margin: 40px auto;
@@ -37,6 +32,8 @@
 
     .about-section p {
       margin: 8px 0;
+      color: grey;
+      font-weight: normal;
     }
 
     h2 {
@@ -46,25 +43,23 @@
       margin-bottom: 10px;
     }
 
-    .footer {
-      margin-top: 60px;
+    nav.footer-nav {
+      width: 80%;
+      max-width: 700px;
+      margin: 30px auto 0;
       display: flex;
       justify-content: space-between;
-      padding: 20px 40px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    .arrow-link {
-      font-size: 28px;
-      text-decoration: none;
+    .arrow {
+      font-size: 2rem;
       color: #368DBB;
       font-weight: bold;
+      text-decoration: none;
     }
 
-    .arrow-link:hover {
-      color: #ffffff;
+    .arrow:hover {
+      color: #0B2D45;
     }
 
     .home-icon {
@@ -76,39 +71,50 @@
       text-decoration: none;
     }
 
-    .home-icon:hover {
-      color: #ffffff;
+    .home-icon svg {
+      vertical-align: middle;
+    }
+
+    .home-icon:hover svg {
+      fill: white;
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="home-icon" title="Home">&#8962;</a>
 
-  <h1><strong>Profile</strong></h1>
+  <!-- Home Icon -->
+  <a href="index.html" class="home-icon" title="Home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#368DBB" viewBox="0 0 24 24">
+      <path d="M12 3l9 8h-3v9h-12v-9h-3l9-8z"/>
+    </svg>
+  </a>
+
+  <h1>ABOUT ME</h1>
 
   <div class="about-content">
     <div class="about-section">
-      <p><strong>Name:</strong> Richa Liz Thomas</p>
-      <p><strong>Designation:</strong> Senior System Engineer / Site Reliability Engineer</p>
-      <p><strong>Company:</strong> Tata Consultancy Services - TCS</p>
-      <p><strong>Experience:</strong> 4+ years</p>
-      <p><strong>Nationality:</strong> India</p>
-      <p><strong>Address:</strong> 143 Whitwell Dr, Brampton, ON, Canada - L6P 1L2</p>
-      <p><strong>Status:</strong> Canadian Permanent Resident</p>
-      <p><strong>Languages:</strong> English, Malayalam</p>
-      <p><strong>Availability:</strong> Immediately</p>
+      <p>Name: Richa Liz Thomas</p>
+      <p>Designation: Senior System Engineer / Site Reliability Engineer</p>
+      <p>Company: Tata Consultancy Services - TCS</p>
+      <p>Experience: 4+ years</p>
+      <p>Nationality: India</p>
+      <p>Address: 143 Whitwell Dr, Brampton, ON, Canada - L6P 1L2</p>
+      <p>Status: Canadian Permanent Resident</p>
+      <p>Languages: English, Malayalam</p>
+      <p>Availability: Immediately</p>
     </div>
 
     <h2>Contact</h2>
     <div class="about-section">
-      <p><strong>Mobile:</strong> +1 647 523 3620</p>
-      <p><strong>Email:</strong> richathomas95@gmail.com</p>
+      <p>Mobile: +1 647 523 3620</p>
+      <p>Email: richathomas95@gmail.com</p>
     </div>
   </div>
 
-  <div class="footer">
-    <a class="arrow-link" href="projects.html">&#8592; Projects</a>
+  <nav class="footer-nav">
+    <a class="arrow" href="projects.html">&#8592; Projects</a>
     <span></span>
-  </div>
+  </nav>
+
 </body>
 </html>
